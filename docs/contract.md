@@ -107,7 +107,7 @@ export default () => {
 
 #### 如果你使用vsCode，可以添加下面自定义代码片段：
 ```
-        "useApi": {
+		"useApi": {
 			"prefix": "useapi", // 触发的关键字
 			"body": [
 				"import { ${1} } from '@/contracts/address';",
@@ -148,6 +148,9 @@ export default () => {
 				"  watchAccount(() => {",
 				"    createContract();",
 				"  });",
+				"",
+				"${3}",
+				"",
 				"  const userInfo = async () => {",
 				"  const resp = await bpRead(${2}.value.userInfo, appStore.defaultAccount);",
 				"  if (!resp.status) return;",
