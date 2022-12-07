@@ -43,6 +43,8 @@
 
 - GlobalLoading
 
+## [一些报错总结](/error)
+
 ---
 
 # 体验一下
