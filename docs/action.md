@@ -167,6 +167,11 @@ return status; // write,一般字需要将请求的状态返回即可
 2. 在 hooks 中有 `useRead` 和 `useWrite`，分别对应的读写，
    一般时不需要错误消息处理的，如果有场景需求，则需要返回:
 
+3. 为了方便通讯，在```appStore```中，可以触发```refreshAllRead```方法，告诉全世界的```useRead```重跑，不管立即不立即执行的```useRead```。
+
+不能在```useRead```中使用该方法；一般是在触发一个按钮之后，触发。
+该方法不要最好不要滥用。
+
 ```
 {
   status: false, // 状态标记为false

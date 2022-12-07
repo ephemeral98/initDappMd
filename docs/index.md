@@ -21,6 +21,10 @@
 
 即：@/utils/bpDirective.ts 文件
 
+## [关于计算](/bpMath)
+
+> 二次封装 math.js 库，解决 js 精度丢失问题
+
 ## [路由工具](/router)
 
 在一些特别情况下使用 vue-router
@@ -32,6 +36,7 @@
 ## [常用 hooks](/hooks)
 
 ## [全局组件](/commonCps)
+
 - bp-button
 
 - bp-swiper
@@ -44,7 +49,7 @@
 
 ```ts
 import { ethers } from 'ethers';
-const provider = new ethers.providers.Web3Provider(window.ethereum, 'any'); 
+const provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
 const signer = provider.getSigner();
 
 const obj = new ethers.Contract(合约地址, 合约abi, signer);
@@ -54,7 +59,6 @@ const obj = new ethers.Contract(合约地址, 合约abi, signer);
 const resp = await obj.approve(授权的地址, ethers.constants.MaxUint256);
 await resp?.wait?.();
 ```
-
 
 ## PS:
 
