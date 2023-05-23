@@ -1,8 +1,19 @@
 # 横向选项卡源码：
 
+```ts
+// type.d.ts
+
+interface ITab {
+  id: number;
+  text: string; // 标签文案
+  active: boolean; // 是否激活中
+  disable?: boolean; // 是否禁止操作
+}
+```
+
+
 ```vue
 <script setup lang="ts">
-import { ITab } from './types';
 const props = defineProps<{
   tabs: ITab[]; // 选项内容
   fontSize?: string; // 字体大小
@@ -27,6 +38,8 @@ const barLeft = ref<number>(0); // 滑块距离
 const barWidth = ref<number>(0); // 滑块宽度
 
 const doPickTab = (item, e) => {
+  if (item.disable) return;
+
   const newTabs = props.tabs.map((t, i) => {
     t.active = t.id === item.id;
     return t;

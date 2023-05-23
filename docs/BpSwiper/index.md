@@ -27,6 +27,28 @@ const nftList = reactive([
   </bp-swiper>
 ```
 
+### 使用翻页
+
+给某按钮加上这2个class
+
+```vue
+const swiperOptions = reactive({
+  navigation: {
+    prevEl: '.slide-prev', // 上一页
+    nextEl: '.slide-next', // 下一页
+  }
+});
+
+<bp-swiper :option="swiperOptions">
+    <swiper-slide v-for="(nft, inx) in nftList" :key="inx">
+      <div class="item-container"> {{ nft.id }} </div>
+    </swiper-slide>
+</bp-swiper>
+
+<button class="slide-prev">上一页</button>
+<button class="slide-next">下一页</button>
+```
+
 ### 使用 pagination:
 
 ```vue
@@ -73,13 +95,13 @@ slidesPerView: 3, //设置slider容器能够同时显示的slides数量(carousel
       @include flexPos(center);
       opacity: 0.5;
     }
-    .swiper-slide-active,
-    .swiper-slide-duplicate-active {
+
+    .swiper-slide-active {
+      z-index: 99;
       opacity: 1;
 
       .item-container {
         transform: scale(1.7);
-        z-index: 99;
       }
     }
 
