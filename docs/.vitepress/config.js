@@ -80,6 +80,15 @@ export default defineConfig({
             ],
             collapsed: true,
           },
+          {
+            text: '滚动动画',
+            link: '/BPComponents/ScrollAnimate/template',
+            items: [
+              { text: '滚动动画Vue模板', link: '/BPComponents/ScrollAnimate/template' },
+              { text: '滚动动画Hook', link: '/BPComponents/ScrollAnimate/hook' },
+            ],
+            collapsed: true,
+          },
         ],
         collapsible: true,
         collapsed: false,
