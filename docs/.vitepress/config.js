@@ -103,6 +103,17 @@ export default defineConfig({
           },
         ],
       },
+
+      {
+        text: '一些特效',
+        items: [
+          {
+            text: 'Flame',
+            link: '/SpecialEffect/Flame/index',
+            items: [{ text: 'Flame源码', link: '/SpecialEffect/Flame/index' }],
+          },
+        ],
+      },
     ],
   },
 });
