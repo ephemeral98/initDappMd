@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "preview": "ln -sf . vitepress-demo && echo '' && echo '  静态站请打开: http://127.0.0.1:5173/vitepress-demo/ （勿用根路径 /，否则 CSS 会 404）' && echo '' && serve . -l 5173 -n",
+    "build": "node scripts/build-static.mjs",
+    "docs:build": "node scripts/build-static.mjs",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "vitepress:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {

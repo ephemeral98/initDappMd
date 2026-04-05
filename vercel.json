@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "yarn build",
+  "outputDirectory": "dist",
+  "installCommand": "yarn install",
+  "rewrites": [
+    {
+      "source": "/vitepress-demo",
+      "destination": "/"
+    },
+    {
+      "source": "/vitepress-demo/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
