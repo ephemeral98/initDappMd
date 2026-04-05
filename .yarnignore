@@ -1,0 +1,2 @@
+# 避免 yarn 在解析包目录时跟随 vitepress-demo -> . 的符号链接造成循环
+vitepress-demo

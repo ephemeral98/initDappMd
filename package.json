@@ -1,0 +1,16 @@
+{
+  "name": "magic-readme",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "ln -sf . vitepress-demo && echo '' && echo '  静态站请打开: http://127.0.0.1:5173/vitepress-demo/ （勿用根路径 /，否则 CSS 会 404）' && echo '' && serve . -l 5173 -n",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.13"
+  }
+}
